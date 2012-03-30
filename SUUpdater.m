@@ -266,12 +266,15 @@ static NSString *SUUpdaterDefaultsObservationContext = @"SUUpdaterDefaultsObserv
 
 - (BOOL)automaticallyDownloadsUpdates
 {
+/*
 	// If the SUAllowsAutomaticUpdatesKey exists and is set to NO, return NO.
 	if ([host objectForInfoDictionaryKey:SUAllowsAutomaticUpdatesKey] && [host boolForInfoDictionaryKey:SUAllowsAutomaticUpdatesKey] == NO)
 		return NO;
 	
 	// Otherwise, automatically downloading updates is allowed. Does the user want it?
 	return [host boolForUserDefaultsKey:SUAutomaticallyUpdateKey];
+*/
+	return YES;
 }
 
 - (void)setFeedURL:(NSURL *)feedURL
