@@ -42,6 +42,9 @@
 - (void)setAutomaticallyDownloadsUpdates:(BOOL)automaticallyDownloadsUpdates;
 - (BOOL)automaticallyDownloadsUpdates;
 
+- (void)setQuietUpdates:(BOOL)quietUpdates;
+- (BOOL)quietUpdates;
+
 // This IBAction is meant for a main menu item. Hook up any menu item to this action,
 // and Sparkle will check for updates and report back its findings verbosely.
 - (IBAction)checkForUpdates:sender;

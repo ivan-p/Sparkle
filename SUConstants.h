@@ -30,6 +30,8 @@ extern NSString *SUEnableSystemProfilingKey;
 extern NSString *SUSendProfileInfoKey;
 extern NSString *SULastProfileSubmitDateKey;
 
+extern NSString *SUQuietUpdatesKey;
+
 extern NSString *SUSparkleErrorDomain;
 // Appcast phase errors.
 extern OSStatus SUAppcastParseError;

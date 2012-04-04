@@ -29,6 +29,8 @@ NSString *SUEnableAutomaticChecksKeyOld = @"SUCheckAtStartup";
 NSString *SUSendProfileInfoKey = @"SUSendProfileInfo";
 NSString *SULastProfileSubmitDateKey = @"SULastProfileSubmissionDate";
 
+NSString *SUQuietUpdatesKey = @"SUQuietUpdates";
+
 NSString *SUSparkleErrorDomain = @"SUSparkleErrorDomain";
 OSStatus SUAppcastParseError = 1000;
 OSStatus SUNoUpdateError = 1001;

@@ -15,14 +15,16 @@
 
 - (void)unarchiverDidFinish:(SUUnarchiver *)ua
 {
-/*
-	alert = [[SUAutomaticUpdateAlert alloc] initWithAppcastItem:updateItem host:host delegate:self];
-	if ([NSApp isActive])
-		[[alert window] makeKeyAndOrderFront:self];
+	if (![host boolForKey:SUQuietUpdatesKey])
+	{
+		alert = [[SUAutomaticUpdateAlert alloc] initWithAppcastItem:updateItem host:host delegate:self];
+		if ([NSApp isActive])
+			[[alert window] makeKeyAndOrderFront:self];
+		else
+			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];	
+	}
 	else
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:NSApplicationDidBecomeActiveNotification object:NSApp];	
-*/
-	[self installUpdate];
+		[self installUpdate];
 }
 
 - (void)applicationDidBecomeActive:(NSNotification *)aNotification
